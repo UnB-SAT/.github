@@ -159,11 +159,12 @@ A sample of the challenges posed across editions:
 
 | Challenge | How students attacked it | Submitted to MOJ |
 |---|---|---|
-| Minesweeper (Campo Minado) | CNF modeling and SAT inference | |
+| Minesweeper (Campo Minado) | CNF modeling and SAT inference | yes |
 | Light Up (Akari) | pseudo-Boolean and SAT modeling | yes |
 | Lights Out, and a Lights Out RGB variant | pseudo-Boolean and SAT modeling | yes |
 | Bomberda | automated planning in PDDL | yes |
-| N-puzzle and Pac-Man | state-space search, and planning as SAT | |
+| N-puzzle | state-space search and planning | |
+| Pac-Man | planning as SAT | yes |
 | *FCT Entregas* (deliveries), scored on three tracks: Agile, Satisficing, Optimal | automated planning | yes |
 | Connect-4 tournament | minimax and adversarial search | |
 
