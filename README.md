@@ -52,15 +52,16 @@ maintainer then runs `python3 scripts/build_profile.py` and commits the result.
 
 ## What still needs filling in
 
-Most people are missing GitHub, Lattes and LinkedIn links. The BDM and repository
-PDFs are a good source; add what you find to `students.yml`.
+Lattes and LinkedIn are still empty for most people; add them as you collect them.
+The BDM and repository PDFs are a good source.
 
-Confirmed GitHub handles: `bcribas` (advisor), `GabrielTiveron`, `andrelucax`,
-`igorpenhaa` (Igor Penha), `BrunoRiibeiro` (Bruno Campos Ribeiro) and `LucasBergholz`
-(added by the student himself). Three more are only guesses, flagged with
-`# candidate:` comments in the data file: `Bumbleblo` for Felipe Chaves, `west7` for
-Guilherme Westphall, and `martinsglucas` for Lucas Martins Gabriel. Please confirm
-before trusting them.
+Most students now have a confirmed GitHub handle (avatars verified). The earlier
+candidate guesses are resolved: Felipe Chaves is `Bumbleblo`, Guilherme Westphall is
+`west7`, and Lucas Martins Gabriel is `martinsglucas`.
+
+Still without a GitHub handle: Ulysses Lara, João Dias, Marcelo Martins de Oliveira,
+Arthur Grandão de Mello, Caio Ferreira, Lucas Caldas, and the two M.Sc. students
+(Marcelo Anselmo and Bruno Resende).
 
 For the `program` field of each Iniciação Científica entry, set `PIBIC` or `PIBITI`.
 The Lattes export does not record which programme funded each project, so it is left

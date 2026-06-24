@@ -295,13 +295,13 @@ Grouped by research line. Co-authors who are or were our students are shown in
     <td align="center" valign="top" width="155"><a href="https://github.com/gdeusdara"><img src="https://github.com/gdeusdara.png?size=160" width="90" alt="Guilherme Antonio Deusdará Banci"/></a><br/><sub><b>Guilherme Antonio Deusdará Banci</b></sub><br/><sub>B.Sc., IC</sub><br/><sub><a href="https://github.com/gdeusdara">GitHub</a></sub></td>
   </tr>
   <tr>
-    <td align="center" valign="top" width="155"><img src="https://ui-avatars.com/api/?background=0D1117&color=FFFFFF&bold=true&size=120&name=Guilherme%20Westphall" width="90" alt="Guilherme Westphall"/><br/><sub><b>Guilherme Westphall</b></sub><br/><sub>B.Sc.</sub><br/><sub><i>links to add</i></sub></td>
+    <td align="center" valign="top" width="155"><a href="https://github.com/west7"><img src="https://github.com/west7.png?size=160" width="90" alt="Guilherme Westphall"/></a><br/><sub><b>Guilherme Westphall</b></sub><br/><sub>B.Sc.</sub><br/><sub><a href="https://github.com/west7">GitHub</a></sub></td>
     <td align="center" valign="top" width="155"><a href="https://github.com/igorpenhaa"><img src="https://github.com/igorpenhaa.png?size=160" width="90" alt="Igor e Silva Penha"/></a><br/><sub><b>Igor e Silva Penha</b></sub><br/><sub>B.Sc., IC</sub><br/><sub><a href="https://github.com/igorpenhaa">GitHub</a></sub></td>
     <td align="center" valign="top" width="155"><img src="https://ui-avatars.com/api/?background=0D1117&color=FFFFFF&bold=true&size=120&name=Jo%C3%A3o%20Lu%C3%ADs%20Takur%20Baraky%20Dias" width="90" alt="João Luís Takur Baraky Dias"/><br/><sub><b>João Luís Takur Baraky Dias</b></sub><br/><sub>B.Sc.</sub><br/><sub><i>links to add</i></sub></td>
     <td align="center" valign="top" width="155"><a href="https://github.com/LucasBergholz"><img src="https://github.com/LucasBergholz.png?size=160" width="90" alt="Lucas Gobbi Bergholz"/></a><br/><sub><b>Lucas Gobbi Bergholz</b></sub><br/><sub>B.Sc.</sub><br/><sub><a href="https://github.com/LucasBergholz">GitHub</a> &middot; <a href="https://lattes.cnpq.br/2254701491777732">Lattes</a> &middot; <a href="https://www.linkedin.com/in/lucas-bergholz/">LinkedIn</a></sub></td>
   </tr>
   <tr>
-    <td align="center" valign="top" width="155"><img src="https://ui-avatars.com/api/?background=0D1117&color=FFFFFF&bold=true&size=120&name=Lucas%20Martins%20Gabriel" width="90" alt="Lucas Martins Gabriel"/><br/><sub><b>Lucas Martins Gabriel</b></sub><br/><sub>B.Sc.</sub><br/><sub><i>links to add</i></sub></td>
+    <td align="center" valign="top" width="155"><a href="https://github.com/martinsglucas"><img src="https://github.com/martinsglucas.png?size=160" width="90" alt="Lucas Martins Gabriel"/></a><br/><sub><b>Lucas Martins Gabriel</b></sub><br/><sub>B.Sc.</sub><br/><sub><a href="https://github.com/martinsglucas">GitHub</a></sub></td>
     <td align="center" valign="top" width="155"><img src="https://ui-avatars.com/api/?background=0D1117&color=FFFFFF&bold=true&size=120&name=Marcelo%20Martins%20de%20Oliveira" width="90" alt="Marcelo Martins de Oliveira"/><br/><sub><b>Marcelo Martins de Oliveira</b></sub><br/><sub>B.Sc.</sub><br/><sub><i>links to add</i></sub></td>
     <td align="center" valign="top" width="155"><a href="https://github.com/mateusnr"><img src="https://github.com/mateusnr.png?size=160" width="90" alt="Mateus Nascimento Nóbrega"/></a><br/><sub><b>Mateus Nascimento Nóbrega</b></sub><br/><sub>B.Sc.</sub><br/><sub><a href="https://github.com/mateusnr">GitHub</a></sub></td>
     <td align="center" valign="top" width="155"><a href="https://github.com/RodrigoTCLima"><img src="https://github.com/RodrigoTCLima.png?size=160" width="90" alt="Rodrigo Tiago Costa Lima"/></a><br/><sub><b>Rodrigo Tiago Costa Lima</b></sub><br/><sub>B.Sc.</sub><br/><sub><a href="https://github.com/RodrigoTCLima">GitHub</a></sub></td>
@@ -341,9 +341,15 @@ Grouped by research line. Co-authors who are or were our students are shown in
 - Profiles: [Google Scholar](https://scholar.google.com/citations?user=pW_EVJoAAAAJ), [ResearchGate](https://www.researchgate.net/profile/Bruno-Ribas), [DBLP](https://dblp.org/pid/121/4222)
 - Email: `bruno.ribas@unb.br`
 
-<div align="center"><sub>
+<div align="center">
 
-The theses, Iniciação Científica and people sections are generated from
+<em>UnB-SAT is currently a research and teaching group, not yet a formally
+consolidated laboratory at UnB. A proposal to establish the laboratory is planned
+for the near future.</em>
+
+<sub>
+
+The current-students, theses, Iniciação Científica and people sections are generated from
 <a href="../data/students.yml"><code>data/students.yml</code></a>; edit it and run
 <code>python3 scripts/build_profile.py</code>.
 

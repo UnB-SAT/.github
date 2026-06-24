@@ -436,7 +436,7 @@ students:
         en: "GGP-LLM: an LLM-based General Game Playing agent (joint TCC with Caio Felipe Rocha Rodrigues)"
 
   - name: "Guilherme Westphall"
-    github: ""                                 # candidate: "west7" (FLIA PluSAT coursework; name match), please confirm
+    github: "west7"
     lattes: ""
     linkedin: ""
     theme: planning
@@ -448,7 +448,7 @@ students:
         en: "Scheduling on the Gollen Network via AI planning (joint TCC with Lucas Martins Gabriel)"
 
   - name: "Lucas Martins Gabriel"
-    github: ""                                 # candidate: "martinsglucas" (FLIA PluSAT coursework; name match), please confirm
+    github: "martinsglucas"
     lattes: ""
     linkedin: ""
     theme: planning
