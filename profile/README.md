@@ -68,9 +68,7 @@ for the near future.</em>
 
 <sub>
 
-The team grid is generated from
-<a href="../data/students.yml"><code>data/students.yml</code></a>; edit it and run
-<code>python3 scripts/build_profile.py</code>. This overview was compiled with the
+This overview was compiled with the
 support of Claude (Anthropic) from public sources: the BDM, the UnB repository, DBLP
 and the group's Lattes CV.
 
