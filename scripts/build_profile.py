@@ -130,7 +130,7 @@ def build_ic(students: list) -> str:
         for person, adv in group:
             tags = []
             if adv.get("program"):
-                tags.append(adv["program"])
+                tags.append(adv["program"].upper())
             if adv.get("scholarship"):
                 tags.append("scholarship")
             if adv.get("link"):
@@ -160,7 +160,7 @@ def build_ongoing(students: list) -> str:
             if adv["kind"] == "ic":
                 parts = ["IC"]
                 if adv.get("program"):
-                    parts.append(adv["program"])
+                    parts.append(adv["program"].upper())
                 parts.append("expected " + adv["ends"] if adv.get("ends") else "in progress")
                 meta = ", ".join(parts)
             else:

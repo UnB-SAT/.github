@@ -62,9 +62,9 @@ still change.
 
 - **André Emanuel Bispo da Silva** (B.Sc. TCC, in progress). *Aquasplash: uma abordagem em planejamento automatizado (provisional title)*.
   <sub>Aquasplash: an automated-planning approach</sub>
-- **Arthur Ribeiro e Sousa** (B.Sc. TCC, in progress). *GGP-LLM: um jogador GGP baseado em LLM*.
+- **Arthur Ribeiro e Sousa** (B.Sc. TCC, in progress). *GGP-LLM: um jogador GGP baseado em LLM (provisional title)*.
   <sub>GGP-LLM: an LLM-based General Game Playing agent (joint TCC with Caio Felipe Rocha Rodrigues)</sub>
-- **Caio Felipe Rocha Rodrigues** (B.Sc. TCC, in progress). *GGP-LLM: um jogador GGP baseado em LLM*.
+- **Caio Felipe Rocha Rodrigues** (B.Sc. TCC, in progress). *GGP-LLM: um jogador GGP baseado em LLM (provisional title)*.
   <sub>GGP-LLM: an LLM-based General Game Playing agent (joint TCC with Arthur Ribeiro e Sousa)</sub>
 - **Carlos Eduardo Mota Alves** (B.Sc. TCC, in progress). *Planejamento como satisfatibilidade: novas abordagens e estudo de caso (provisional title)*.
   <sub>Planning as satisfiability: new approaches and a case study</sub>
@@ -153,7 +153,7 @@ projects later turned into theses or publications listed on this page.
 
 #### Automated Planning
 
-- **Bruno Campos Ribeiro** (IC, 2024). *Do PDDL ao C: explorando novos caminhos com bni*.
+- **Bruno Campos Ribeiro** (IC, 2024). *Do PDDL ao C: explorando novos caminhos com bni*.  PIBIC
   <sub>From PDDL to C: exploring new paths with bni</sub>
 - **Daniel dos Santos Barros de Sousa** (IC, 2024). *Planejamento automatizado para jogos de estratégia em tempo real*.
   <sub>Automated planning for real-time strategy games</sub>
@@ -268,11 +268,11 @@ Grouped by research line. Co-authors who are or were our students are shown in
   <tr>
     <td align="center" valign="top" width="155"><a href="https://github.com/andrelucax"><img src="https://github.com/andrelucax.png?size=160" width="90" alt="André Lucas de Sousa Pinto"/></a><br/><sub><b>André Lucas de Sousa Pinto</b></sub><br/><sub>B.Sc.</sub><br/><sub><a href="https://github.com/andrelucax">GitHub</a></sub></td>
     <td align="center" valign="top" width="155"><img src="https://ui-avatars.com/api/?background=0D1117&color=FFFFFF&bold=true&size=120&name=Arthur%20Grand%C3%A3o%20de%20Mello" width="90" alt="Arthur Grandão de Mello"/><br/><sub><b>Arthur Grandão de Mello</b></sub><br/><sub>B.Sc.</sub><br/><sub><i>links to add</i></sub></td>
-    <td align="center" valign="top" width="155"><img src="https://ui-avatars.com/api/?background=0D1117&color=FFFFFF&bold=true&size=120&name=Felipe%20Borges%20de%20Souza%20Chaves" width="90" alt="Felipe Borges de Souza Chaves"/><br/><sub><b>Felipe Borges de Souza Chaves</b></sub><br/><sub>B.Sc.</sub><br/><sub><i>links to add</i></sub></td>
+    <td align="center" valign="top" width="155"><a href="https://github.com/Bumbleblo"><img src="https://github.com/Bumbleblo.png?size=160" width="90" alt="Felipe Borges de Souza Chaves"/></a><br/><sub><b>Felipe Borges de Souza Chaves</b></sub><br/><sub>B.Sc.</sub><br/><sub><a href="https://github.com/Bumbleblo">GitHub</a></sub></td>
     <td align="center" valign="top" width="155"><a href="https://github.com/GabrielTiveron"><img src="https://github.com/GabrielTiveron.png?size=160" width="90" alt="Gabriel Marques Tiveron"/></a><br/><sub><b>Gabriel Marques Tiveron</b></sub><br/><sub>B.Sc., IC</sub><br/><sub><a href="https://github.com/GabrielTiveron">GitHub</a></sub></td>
   </tr>
   <tr>
-    <td align="center" valign="top" width="155"><img src="https://ui-avatars.com/api/?background=0D1117&color=FFFFFF&bold=true&size=120&name=Guilherme%20Puida%20Moreira" width="90" alt="Guilherme Puida Moreira"/><br/><sub><b>Guilherme Puida Moreira</b></sub><br/><sub>B.Sc.</sub><br/><sub><i>links to add</i></sub></td>
+    <td align="center" valign="top" width="155"><a href="https://github.com/guilherme-puida"><img src="https://github.com/guilherme-puida.png?size=160" width="90" alt="Guilherme Puida Moreira"/></a><br/><sub><b>Guilherme Puida Moreira</b></sub><br/><sub>B.Sc.</sub><br/><sub><a href="https://github.com/guilherme-puida">GitHub</a> &middot; <a href="https://www.linkedin.com/in/guilherme-puida/">LinkedIn</a></sub></td>
     <td align="center" valign="top" width="155"><img src="https://ui-avatars.com/api/?background=0D1117&color=FFFFFF&bold=true&size=120&name=Lucas%20Gomes%20Silva" width="90" alt="Lucas Gomes Silva"/><br/><sub><b>Lucas Gomes Silva</b></sub><br/><sub>B.Sc.</sub><br/><sub><i>links to add</i></sub></td>
     <td align="center" valign="top" width="155"><img src="https://ui-avatars.com/api/?background=0D1117&color=FFFFFF&bold=true&size=120&name=Lu%C3%ADs%20Henrique%20Pereira%20Taira" width="90" alt="Luís Henrique Pereira Taira"/><br/><sub><b>Luís Henrique Pereira Taira</b></sub><br/><sub>B.Sc.</sub><br/><sub><i>links to add</i></sub></td>
     <td align="center" valign="top" width="155"><img src="https://ui-avatars.com/api/?background=0D1117&color=FFFFFF&bold=true&size=120&name=Ulysses%20Bernard%20Mendes%20Lara" width="90" alt="Ulysses Bernard Mendes Lara"/><br/><sub><b>Ulysses Bernard Mendes Lara</b></sub><br/><sub>B.Sc.</sub><br/><sub><i>links to add</i></sub></td>
@@ -286,7 +286,7 @@ Grouped by research line. Co-authors who are or were our students are shown in
     <td align="center" valign="top" width="155"><img src="https://ui-avatars.com/api/?background=0D1117&color=FFFFFF&bold=true&size=120&name=Andr%C3%A9%20Emanuel%20Bispo%20da%20Silva" width="90" alt="André Emanuel Bispo da Silva"/><br/><sub><b>André Emanuel Bispo da Silva</b></sub><br/><sub>B.Sc., IC</sub><br/><sub><i>links to add</i></sub></td>
     <td align="center" valign="top" width="155"><img src="https://ui-avatars.com/api/?background=0D1117&color=FFFFFF&bold=true&size=120&name=Antonio%20Ruan%20Moura%20Barreto" width="90" alt="Antonio Ruan Moura Barreto"/><br/><sub><b>Antonio Ruan Moura Barreto</b></sub><br/><sub>B.Sc.</sub><br/><sub><i>links to add</i></sub></td>
     <td align="center" valign="top" width="155"><img src="https://ui-avatars.com/api/?background=0D1117&color=FFFFFF&bold=true&size=120&name=Arthur%20Ribeiro%20e%20Sousa" width="90" alt="Arthur Ribeiro e Sousa"/><br/><sub><b>Arthur Ribeiro e Sousa</b></sub><br/><sub>B.Sc.</sub><br/><sub><i>links to add</i></sub></td>
-    <td align="center" valign="top" width="155"><a href="https://github.com/BrunoRiibeiro"><img src="https://github.com/BrunoRiibeiro.png?size=160" width="90" alt="Bruno Campos Ribeiro"/></a><br/><sub><b>Bruno Campos Ribeiro</b></sub><br/><sub>B.Sc., IC</sub><br/><sub><a href="https://github.com/BrunoRiibeiro">GitHub</a></sub></td>
+    <td align="center" valign="top" width="155"><a href="https://github.com/BrunoRiibeiro"><img src="https://github.com/BrunoRiibeiro.png?size=160" width="90" alt="Bruno Campos Ribeiro"/></a><br/><sub><b>Bruno Campos Ribeiro</b></sub><br/><sub>B.Sc., IC</sub><br/><sub><a href="https://github.com/BrunoRiibeiro">GitHub</a> &middot; <a href="https://lattes.cnpq.br/0137300456623017">Lattes</a> &middot; <a href="https://linkedin.com/in/brunoriibeiro">LinkedIn</a></sub></td>
   </tr>
   <tr>
     <td align="center" valign="top" width="155"><img src="https://ui-avatars.com/api/?background=0D1117&color=FFFFFF&bold=true&size=120&name=Caio%20Felipe%20Rocha%20Rodrigues" width="90" alt="Caio Felipe Rocha Rodrigues"/><br/><sub><b>Caio Felipe Rocha Rodrigues</b></sub><br/><sub>B.Sc.</sub><br/><sub><i>links to add</i></sub></td>

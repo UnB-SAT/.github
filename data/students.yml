@@ -80,7 +80,7 @@ students:
         repo: "https://github.com/UnB-SAT/pb-graph-query"
 
   - name: "Felipe Borges de Souza Chaves"
-    github: ""                                 # TODO  (candidate: "Bumbleblo", top PluSAT contributor)
+    github: "Bumbleblo"                        # confirmed (PluSAT TCC author)
     lattes: ""
     linkedin: ""
     theme: sat
@@ -419,6 +419,7 @@ students:
     advisings:
       - kind: tcc
         status: ongoing
+        provisional: true
         title: "GGP-LLM: um jogador GGP baseado em LLM"
         en: "GGP-LLM: an LLM-based General Game Playing agent (joint TCC with Arthur Ribeiro e Sousa)"
 
@@ -430,11 +431,12 @@ students:
     advisings:
       - kind: tcc
         status: ongoing
+        provisional: true
         title: "GGP-LLM: um jogador GGP baseado em LLM"
         en: "GGP-LLM: an LLM-based General Game Playing agent (joint TCC with Caio Felipe Rocha Rodrigues)"
 
   - name: "Guilherme Westphall"
-    github: ""                                 # candidate: "west7" (PluSAT contributor), please confirm
+    github: ""                                 # candidate: "west7" (FLIA PluSAT coursework; name match), please confirm
     lattes: ""
     linkedin: ""
     theme: planning
@@ -446,7 +448,7 @@ students:
         en: "Scheduling on the Gollen Network via AI planning (joint TCC with Lucas Martins Gabriel)"
 
   - name: "Lucas Martins Gabriel"
-    github: ""                                 # candidate: "martinsglucas" (PluSAT contributor), please confirm
+    github: ""                                 # candidate: "martinsglucas" (FLIA PluSAT coursework; name match), please confirm
     lattes: ""
     linkedin: ""
     theme: planning
