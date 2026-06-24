@@ -44,7 +44,7 @@ syllabus and challenges: <https://www.brunoribas.com.br/flia/2025-1/>.
   <a href="https://www.brunoribas.com.br"><img src="https://github.com/bcribas.png?size=200" width="120" alt="Bruno César Ribas"/></a><br/>
   <b>Bruno César Ribas</b><br/>
   <sub>Associate Professor, University of Brasília (FCTE, Gama)</sub><br/>
-  <a href="https://www.brunoribas.com.br">Site</a> &middot; <a href="https://scholar.google.com/citations?user=pW_EVJoAAAAJ">Scholar</a> &middot; <a href="https://dblp.org/pid/121/4222">DBLP</a> &middot; <a href="https://www.researchgate.net/profile/Bruno-Ribas">ResearchGate</a> &middot; <a href="https://www.linkedin.com/in/bruno-ribas-41a051b3/">LinkedIn</a> &middot; <a href="https://github.com/bcribas">GitHub</a>
+  <a href="https://www.brunoribas.com.br">Site</a> &middot; <a href="https://scholar.google.com/citations?user=pW_EVJoAAAAJ">Scholar</a> &middot; <a href="https://dblp.org/pid/121/4222">DBLP</a> &middot; <a href="https://www.researchgate.net/profile/Bruno-Ribas">ResearchGate</a> &middot; <a href="https://www.linkedin.com/in/bruno-ribas-41a051b3/">LinkedIn</a> &middot; <a href="http://lattes.cnpq.br/6871745921667698">Lattes</a> &middot; <a href="https://github.com/bcribas">GitHub</a>
 </p>
 
 The team (students and collaborators), advised theses, undergraduate research
@@ -55,6 +55,7 @@ The team (students and collaborators), advised theses, undergraduate research
 
 - Group website: <https://unb-sat.github.io>
 - CD-MOJ: [judge](https://moj.naquadah.com.br), [docs](https://cd-moj.github.io/cd-moj.docs/), [github.com/cd-moj](https://github.com/cd-moj)
+- Maratona-Linux: [github.com/maratona-linux](https://github.com/maratona-linux)
 - Advised work: [BDM (TCC)](https://bdm.unb.br/browse?type=advisor&value=Ribas%2C+Bruno+C%C3%A9sar), [UnB repository (M.Sc.)](https://repositorio.unb.br/browse?type=advisor&value=Ribas%2C+Bruno+C%C3%A9sar)
 - Profiles: [Google Scholar](https://scholar.google.com/citations?user=pW_EVJoAAAAJ), [ResearchGate](https://www.researchgate.net/profile/Bruno-Ribas), [DBLP](https://dblp.org/pid/121/4222)
 - Email: `bruno.ribas@unb.br`
