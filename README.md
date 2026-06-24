@@ -1,109 +1,21 @@
 # `.github`: UnB-SAT organization profile
 
-This repository powers the public profile of the
-**[UnB-SAT](https://github.com/UnB-SAT)** organization
-(Laboratório de Satisfatibilidade e Planejamento Automatizado, UnB).
+This repository provides the public profile shown at <https://github.com/UnB-SAT>,
+rendered from [`profile/README.md`](profile/README.md). It is a small **static** page:
+group overview, research lines, the principal investigator, and a link to the website.
 
-> GitHub renders [`profile/README.md`](profile/README.md) on the organization's
-> landing page: <https://github.com/UnB-SAT>. It is a slim overview (about, research
-> lines, teaching, team). The full content (all theses, undergraduate research and
-> publications) lives on the group website, generated into the sibling
-> [`unb-sat.github.io`](https://github.com/UnB-SAT/unb-sat.github.io) repository and
-> published at <https://unb-sat.github.io>.
+The group website (the team, all theses, undergraduate research and publications),
+along with the data and the generator that build it, lives in the sibling repository
+[`unb-sat.github.io`](https://github.com/UnB-SAT/unb-sat.github.io), published at
+<https://unb-sat.github.io>.
 
-## Layout
+Nothing here is generated. Edit `profile/README.md` directly. If the website link or
+the PI details change, update them here by hand.
 
-```
-data/students.yml             single source of truth for people and advised work
-scripts/build_profile.py      regenerates the profile AND the group website
-profile/README.md             slim org landing page (overview + team), generated
-.github/workflows/profile.yml CI check that profile/README.md is in sync
-```
-
-The generator writes the website into the sibling repo, so clone both side by side:
+## Files
 
 ```
-UnB-SAT/
-├── .github/             # this repo (data + generator); "dot-github" locally
-└── unb-sat.github.io/   # the website, https://unb-sat.github.io
+profile/README.md   the org profile page (static)
+README.md           this file
+CLAUDE.md           notes for future Claude Code sessions
 ```
-
-## Updating people and advised work
-
-Generated content (between `<!-- AUTOGEN:* -->` markers) must not be edited by hand.
-The slim profile here shows only the principal investigator; the website holds the
-full **Current students**, **Theses**, **Iniciação Científica**, **People** and
-publications.
-
-1. Edit [`data/students.yml`](data/students.yml). Fill in `github`, `lattes` and
-   `linkedin` as you track them down (empty fields render a neutral avatar and a
-   "links to add" note). Add new advisees, and new `advisings` blocks (kind `tcc`,
-   `msc` or `ic`), in the same file. For work in progress set `status: ongoing`; it
-   moves to the "Current students" section and out of the completed lists.
-2. Rebuild (writes `profile/README.md` here and `index.md` in the sibling
-   `unb-sat.github.io` repo):
-
-   ```bash
-   pip install pyyaml          # once
-   python3 scripts/build_profile.py
-   ```
-
-3. Commit `data/students.yml` and `profile/README.md` here, and push. The website
-   rebuilds itself from this repo (see below), so you normally do not touch the
-   `unb-sat.github.io` repo. The `index.md` the build also wrote locally is just a
-   preview and can stay uncommitted.
-
-To verify the profile is in sync (for example, in CI):
-
-```bash
-python3 scripts/build_profile.py --check   # exits non-zero if stale
-```
-
-## Continuous integration
-
-[`.github/workflows/profile.yml`](.github/workflows/profile.yml) runs that same
-`--check` on every pull request and push that touches `data/students.yml`,
-`scripts/build_profile.py` or `profile/README.md`. If a contributor edits the data
-without rebuilding (for example, through the GitHub web UI), the check fails; a
-maintainer then runs `python3 scripts/build_profile.py` and commits the result.
-
-The **website** rebuilds itself: a workflow in the `unb-sat.github.io` repo checks
-out this repo, runs the generator and commits the regenerated pages. It runs on a
-daily schedule, on demand (Actions tab, "Run workflow"), and on a `repository_dispatch`
-of type `rebuild`.
-
-[`.github/workflows/dispatch-site.yml`](.github/workflows/dispatch-site.yml) sends
-that dispatch automatically on every push to `main` that changes `data/students.yml`
-or `scripts/build_profile.py`, so the site updates within a minute, no manual copy.
-It needs a repository secret `SITE_DISPATCH_TOKEN` (a token allowed to dispatch to
-`unb-sat.github.io`: a fine-grained PAT scoped to that repo with *Contents:
-read and write*, or a classic PAT with `public_repo`). Without the secret the job
-no-ops and the daily schedule still keeps the site fresh.
-
-## What still needs filling in
-
-Lattes and LinkedIn are still empty for most people; add them as you collect them.
-The BDM and repository PDFs are a good source.
-
-Most students now have a confirmed GitHub handle (avatars verified). The earlier
-candidate guesses are resolved: Felipe Chaves is `Bumbleblo`, Guilherme Westphall is
-`west7`, and Lucas Martins Gabriel is `martinsglucas`.
-
-Still without a GitHub handle: Ulysses Lara, João Dias, Marcelo Martins de Oliveira,
-Arthur Grandão de Mello, Caio Ferreira, Lucas Caldas, and the two M.Sc. students
-(Marcelo Anselmo and Bruno Resende).
-
-For the `program` field of each Iniciação Científica entry, set `PIBIC` or `PIBITI`.
-The Lattes export does not record which programme funded each project, so it is left
-blank for you to complete.
-
-Avatars: when a `github` handle is set, the person's real GitHub avatar is used;
-otherwise an initials avatar is generated by
-[ui-avatars.com](https://ui-avatars.com). GitHub's Markdown sanitizer strips inline
-CSS, so avatars render as squares rather than circles.
-
-## Scope note
-
-The profile lists work advised at UnB. Four earlier advisings from UTFPR (2017 and
-2018, on topics outside the group's lines) are intentionally omitted; add them to
-`students.yml` if you want them shown.
