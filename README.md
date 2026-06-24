@@ -5,15 +5,27 @@ This repository powers the public profile of the
 (Laboratório de Satisfatibilidade e Planejamento Automatizado, UnB).
 
 > GitHub renders [`profile/README.md`](profile/README.md) on the organization's
-> landing page: <https://github.com/UnB-SAT>.
+> landing page: <https://github.com/UnB-SAT>. It is a slim overview (about, research
+> lines, teaching, team). The full content (all theses, undergraduate research and
+> publications) lives on the group website, generated into the sibling
+> [`unb-sat.github.io`](https://github.com/UnB-SAT/unb-sat.github.io) repository and
+> published at <https://unb-sat.github.io>.
 
 ## Layout
 
 ```
-profile/README.md            the org profile page (what visitors see)
-data/students.yml            single source of truth for people and advised work
-scripts/build_profile.py     regenerates the auto-generated sections of the profile
-.github/workflows/profile.yml CI check that the profile is in sync with the data
+data/students.yml             single source of truth for people and advised work
+scripts/build_profile.py      regenerates the profile AND the group website
+profile/README.md             slim org landing page (overview + team), generated
+.github/workflows/profile.yml CI check that profile/README.md is in sync
+```
+
+The generator writes the website into the sibling repo, so clone both side by side:
+
+```
+UnB-SAT/
+├── .github/             # this repo (data + generator); "dot-github" locally
+└── unb-sat.github.io/   # the website, https://unb-sat.github.io
 ```
 
 ## Updating people and advised work
@@ -27,14 +39,16 @@ the `<!-- AUTOGEN:* -->` markers is overwritten on the next build.
    "links to add" note). Add new advisees, and new `advisings` blocks (kind `tcc`,
    `msc` or `ic`), in the same file. For work in progress set `status: ongoing`; it
    moves to the "Current students" section and out of the completed lists.
-2. Rebuild:
+2. Rebuild (writes `profile/README.md` here and `index.md` in the sibling
+   `unb-sat.github.io` repo):
 
    ```bash
    pip install pyyaml          # once
    python3 scripts/build_profile.py
    ```
 
-3. Commit `data/students.yml` and `profile/README.md` together.
+3. Commit `data/students.yml` and `profile/README.md` in this repo, and the
+   regenerated `index.md` in the `unb-sat.github.io` repo. Push both.
 
 To verify the profile is in sync (for example, in CI):
 

@@ -27,6 +27,15 @@ except ImportError:
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data", "students.yml")
 README = os.path.join(ROOT, "profile", "README.md")
+# The org-site repo (https://unb-sat.github.io) is cloned alongside this one.
+# Override with UNB_SAT_SITE_DIR if your layout differs.
+SITE_DIR = os.environ.get(
+    "UNB_SAT_SITE_DIR", os.path.normpath(os.path.join(ROOT, "..", "unb-sat.github.io"))
+)
+SITE_INDEX = os.path.join(SITE_DIR, "index.md")
+# Each file receives only the sections whose markers it contains, and only if it
+# exists (so CI that checks out just this repo simply skips the sibling site).
+TARGETS = [README, SITE_INDEX]
 
 THEMES = [
     ("sat", "SAT & Pseudo-Boolean"),
@@ -256,32 +265,52 @@ def build_people(data: dict) -> str:
 
 
 # --------------------------------------------------------------------------- #
+def has_marker(text: str, tag: str) -> bool:
+    return f"<!-- AUTOGEN:{tag}:START -->" in text
+
+
 def inject(text: str, tag: str, payload: str) -> str:
     start, end = f"<!-- AUTOGEN:{tag}:START -->", f"<!-- AUTOGEN:{tag}:END -->"
     pat = re.compile(re.escape(start) + r".*?" + re.escape(end), re.DOTALL)
-    if not pat.search(text):
-        sys.exit(f"Marker {start} ... {end} not found in {README}")
     return pat.sub(lambda _m: f"{start}\n{payload}\n{end}", text)
 
 
 def main() -> None:
     check = "--check" in sys.argv
     data = yaml.safe_load(open(DATA, encoding="utf-8"))
-    original = open(README, encoding="utf-8").read()
-
     students = data.get("students", []) or []
-    updated = inject(original, "ONGOING", build_ongoing(students))
-    updated = inject(updated, "THESES", build_theses(students))
-    updated = inject(updated, "IC", build_ic(students))
-    updated = inject(updated, "PEOPLE", build_people(data))
+
+    # Build each section once; inject into whichever target files contain its marker.
+    payloads = {
+        "ONGOING": build_ongoing(students),
+        "THESES": build_theses(students),
+        "IC": build_ic(students),
+        "PEOPLE": build_people(data),
+    }
+
+    stale, written = [], []
+    for path in TARGETS:
+        if not os.path.exists(path):
+            continue
+        original = open(path, encoding="utf-8").read()
+        text = original
+        for tag, payload in payloads.items():
+            if has_marker(text, tag):
+                text = inject(text, tag, payload)
+        if text == original:
+            continue
+        rel = os.path.relpath(path, ROOT)
+        if check:
+            stale.append(rel)
+        else:
+            open(path, "w", encoding="utf-8").write(text)
+            written.append(rel)
 
     if check:
-        if updated != original:
-            sys.exit("profile/README.md is out of date. Run: python3 scripts/build_profile.py")
-        print("profile/README.md is up to date.")
+        if stale:
+            sys.exit("Out of date, run `python3 scripts/build_profile.py`: " + ", ".join(stale))
+        print("All generated files are up to date.")
         return
-
-    open(README, "w", encoding="utf-8").write(updated)
 
     people = students + (data.get("members") or [])
     n_tcc = sum(1 for p in students for a in p.get("advisings", []) if a.get("kind") == "tcc")
@@ -289,10 +318,10 @@ def main() -> None:
     n_ic = sum(1 for p in students for a in p.get("advisings", []) if a.get("kind") == "ic")
     n_ongoing = sum(1 for p in students for a in p.get("advisings", []) if a.get("status") == "ongoing")
     miss_gh = [p["name"] for p in people if not (p.get("github") or "").strip()]
-    print(f"profile/README.md rebuilt: {len(people)} people; "
-          f"{n_tcc} TCC, {n_msc} M.Sc., {n_ic} IC; {n_ongoing} works in progress.")
+    print(f"Rebuilt: {', '.join(written) if written else '(nothing changed)'}")
+    print(f"  {len(people)} people; {n_tcc} TCC, {n_msc} M.Sc., {n_ic} IC; "
+          f"{n_ongoing} works in progress.")
     print(f"  still missing GitHub: {len(miss_gh)}")
-    print(f"  still missing Lattes/LinkedIn for most entries (fill in data/students.yml).")
 
 
 if __name__ == "__main__":
