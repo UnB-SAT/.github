@@ -8,6 +8,7 @@ Universidade de Brasília · FCTE (Gama campus)
 ![SAT](https://img.shields.io/badge/SAT-%26%20Pseudo--Boolean-1f6feb?style=flat-square)
 ![Planning](https://img.shields.io/badge/Automated-Planning-8957e5?style=flat-square)
 ![CD-MOJ](https://img.shields.io/badge/CD--MOJ-Online%20Judge-2da44e?style=flat-square)
+![Maratona-Linux](https://img.shields.io/badge/Maratona--Linux-environment-e8590c?style=flat-square)
 
 ### Group website, with theses, undergraduate research and publications: <https://unb-sat.github.io>
 
@@ -26,7 +27,7 @@ judge, and at the graduate level we also work on applied artificial intelligence
 
 - **SAT and pseudo-Boolean reasoning.** Modular solvers, encodings and preprocessing, and reductions from other problems to SAT and pseudo-Boolean constraints.
 - **Automated planning.** PDDL modeling, planning as satisfiability (SATPLAN, mixed-Horn formulas, the Madagascar planner), and solving puzzles and games as planning.
-- **CD-MOJ and competitive programming.** The [Contest-Driven Meta Online Judge](https://cd-moj.github.io/cd-moj.docs/) and the Maratona-Linux environment.
+- **CD-MOJ and competitive programming.** The [Contest-Driven Meta Online Judge](https://cd-moj.github.io/cd-moj.docs/) and the [Maratona-Linux](https://github.com/maratona-linux) environment.
 - **Applied AI (graduate research).** Natural language processing, data mining and machine learning.
 
 ## Teaching
