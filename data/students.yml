@@ -93,7 +93,7 @@ students:
         repo: "https://github.com/UnB-SAT/PluSAT"
 
   - name: "Lucas Gomes Silva"
-    github: ""                                 # TODO
+    github: "lksgs0"
     lattes: ""
     linkedin: ""
     theme: sat
@@ -118,7 +118,7 @@ students:
         repo: "https://github.com/UnB-SAT/tcc-andre-mhf-solver"
 
   - name: "Luís Henrique Pereira Taira"
-    github: ""
+    github: "LhTaira"
     lattes: ""
     linkedin: ""
     theme: sat
@@ -143,7 +143,7 @@ students:
 
   # ============================= Automated Planning ==========================
   - name: "Mateus Nascimento Nóbrega"
-    github: ""
+    github: "mateusnr"
     lattes: ""
     linkedin: ""
     theme: planning
@@ -155,7 +155,7 @@ students:
         bdm: "https://bdm.unb.br/handle/10483/34024"
 
   - name: "Guilherme Antonio Deusdará Banci"
-    github: ""
+    github: "gdeusdara"
     lattes: ""
     linkedin: ""
     theme: planning
@@ -199,7 +199,7 @@ students:
         bdm: "https://bdm.unb.br/handle/10483/39154"
 
   - name: "Samuel de Souza Buters Pereira"
-    github: ""
+    github: "SamButers"
     lattes: ""
     linkedin: ""
     theme: planning
@@ -211,7 +211,7 @@ students:
         bdm: "https://bdm.unb.br/handle/10483/39173"
 
   - name: "Antonio Ruan Moura Barreto"
-    github: ""
+    github: "RuanMoura"
     lattes: ""
     linkedin: ""
     theme: planning
@@ -223,7 +223,7 @@ students:
         bdm: "https://bdm.unb.br/handle/10483/39333"
 
   - name: "Rodrigo Tiago Costa Lima"
-    github: ""
+    github: "RodrigoTCLima"
     lattes: ""
     linkedin: ""
     theme: planning
@@ -235,7 +235,7 @@ students:
         bdm: "https://bdm.unb.br/handle/10483/40165"
 
   - name: "Daniel dos Santos Barros de Sousa"
-    github: ""
+    github: "daniel-de-sousa"
     lattes: ""
     linkedin: ""
     theme: planning
@@ -248,7 +248,7 @@ students:
         program: ""                           # TODO: PIBIC / PIBITI
 
   - name: "Wagner Martins da Cunha"
-    github: ""
+    github: "wagnermc506"
     lattes: ""
     linkedin: ""
     theme: planning
@@ -311,7 +311,7 @@ students:
 
   # ====================== CD-MOJ & Competitive Programming ===================
   - name: "Luciano dos Santos Silva"
-    github: ""
+    github: "lucianosz7"
     lattes: ""
     linkedin: ""
     theme: moj
@@ -347,7 +347,7 @@ students:
         bdm: "https://bdm.unb.br/handle/10483/39850"
 
   - name: "Davi Antônio da Silva Santos"
-    github: ""
+    github: "DaviAntonio"
     lattes: ""
     linkedin: ""
     theme: moj
@@ -394,7 +394,7 @@ students:
 
   # ===== Ongoing (current TCC / IC, not yet defended; no document yet) =====
   - name: "André Emanuel Bispo da Silva"
-    github: ""
+    github: "Hunter104"
     lattes: ""
     linkedin: ""
     theme: planning
@@ -412,7 +412,7 @@ students:
         en: "Automated planning for a game with complex transitions (Aquasplash)"
 
   - name: "Caio Felipe Rocha Rodrigues"
-    github: ""
+    github: "caio-felipee"
     lattes: ""
     linkedin: ""
     theme: planning
@@ -424,7 +424,7 @@ students:
         en: "GGP-LLM: an LLM-based General Game Playing agent (joint TCC with Arthur Ribeiro e Sousa)"
 
   - name: "Arthur Ribeiro e Sousa"
-    github: ""
+    github: "artrsousa1"
     lattes: ""
     linkedin: ""
     theme: planning
@@ -460,7 +460,7 @@ students:
         en: "Scheduling on the Gollen Network via AI planning (joint TCC with Guilherme Westphall)"
 
   - name: "Carlos Eduardo Mota Alves"
-    github: ""
+    github: "CADU110"
     lattes: ""
     linkedin: ""
     theme: planning
