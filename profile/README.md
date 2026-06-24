@@ -155,19 +155,25 @@ of the course. Most challenges are competitive and submitted through the MOJ jud
 students do not merely model a problem; they compare their solutions against the whole
 class, and the strongest ones present how they did it.
 
-A representative set of challenges (2025-1):
+A sample of the challenges posed across editions:
 
-| Challenge | Formal lens it provokes |
-|---|---|
-| Minesweeper: prove which cells are logically safe | CNF modeling and SAT inference |
-| Design and present a PDDL domain | planning-domain authoring |
-| *FCT Entregas*, a delivery-planning competition scored on three tracks (Agile, Satisficing, Optimal) | one model, three quality and speed trade-offs |
-| Connect-4 tournament | adversarial search and game modeling |
+| Challenge | How students attacked it | Submitted to MOJ |
+|---|---|---|
+| Minesweeper (Campo Minado) | CNF modeling and SAT inference | |
+| Light Up (Akari) | pseudo-Boolean and SAT modeling | yes |
+| Lights Out, and a Lights Out RGB variant | pseudo-Boolean and SAT modeling | yes |
+| Bomberda | automated planning in PDDL | yes |
+| N-puzzle and Pac-Man | state-space search, and planning as SAT | |
+| *FCT Entregas* (deliveries), scored on three tracks: Agile, Satisficing, Optimal | automated planning | yes |
+| Connect-4 tournament | minimax and adversarial search | |
 
-Across editions, students have modeled classic puzzles and games, among them
-Minesweeper, Pipe Mania, Puzznic and Connect-4, as SAT or as planning. That same
-reflex, asking what happens if a game is phrased as a logic or planning problem, is
-what later grew into several of the theses listed above.
+Most competitive challenges are submitted and ranked on the MOJ judge, and each
+edition also includes designing and presenting PDDL and HDDL planning domains. Across
+editions, students have modeled classic puzzles and games as SAT or as planning,
+among them Minesweeper, Light Up, Lights Out, Bomberda, Pipe Mania and Puzznic, and
+have also built adversarial agents, such as the minimax players in the Connect-4
+tournament. That same reflex, asking what happens when a game is phrased as a logic or
+planning problem, is what later grew into several of the theses listed above.
 
 Editions: 2025-1, 2024-2, 2024-1, 2023-2, 2023-1, 2022-2.
 Latest syllabus, materials and challenges: <https://www.brunoribas.com.br/flia/2025-1/>
