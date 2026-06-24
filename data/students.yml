@@ -126,9 +126,9 @@ students:
         bdm: "https://bdm.unb.br/handle/10483/34524"
 
   - name: "Guilherme Puida Moreira"
-    github: ""
+    github: "guilherme-puida"
     lattes: ""
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/guilherme-puida/"
     theme: sat
     advisings:
       - kind: tcc
