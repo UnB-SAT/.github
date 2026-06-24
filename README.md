@@ -68,11 +68,17 @@ without rebuilding (for example, through the GitHub web UI), the check fails; a
 maintainer then runs `python3 scripts/build_profile.py` and commits the result.
 
 The **website** rebuilds itself: a workflow in the `unb-sat.github.io` repo checks
-out this repo, runs the generator and commits `index.md`. It runs on a daily
-schedule and on demand (Actions tab, "Run workflow"). So after pushing data here,
-trigger that workflow (or wait for the schedule) and the site updates with no manual
-copy. For an instant rebuild on every push, the `.github` repo can send a
-`repository_dispatch` of type `rebuild` using a personal access token.
+out this repo, runs the generator and commits the regenerated pages. It runs on a
+daily schedule, on demand (Actions tab, "Run workflow"), and on a `repository_dispatch`
+of type `rebuild`.
+
+[`.github/workflows/dispatch-site.yml`](.github/workflows/dispatch-site.yml) sends
+that dispatch automatically on every push to `main` that changes `data/students.yml`
+or `scripts/build_profile.py`, so the site updates within a minute, no manual copy.
+It needs a repository secret `SITE_DISPATCH_TOKEN` (a token allowed to dispatch to
+`unb-sat.github.io`: a fine-grained PAT scoped to that repo with *Contents:
+read and write*, or a classic PAT with `public_repo`). Without the secret the job
+no-ops and the daily schedule still keeps the site fresh.
 
 ## What still needs filling in
 

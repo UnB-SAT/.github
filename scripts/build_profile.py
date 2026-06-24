@@ -14,6 +14,7 @@ Usage:
 Requires: PyYAML  ->  pip install pyyaml
 """
 from __future__ import annotations
+import glob
 import os
 import re
 import sys
@@ -32,10 +33,12 @@ README = os.path.join(ROOT, "profile", "README.md")
 SITE_DIR = os.environ.get(
     "UNB_SAT_SITE_DIR", os.path.normpath(os.path.join(ROOT, "..", "unb-sat.github.io"))
 )
-SITE_INDEX = os.path.join(SITE_DIR, "index.md")
-# Each file receives only the sections whose markers it contains, and only if it
-# exists (so CI that checks out just this repo simply skips the sibling site).
-TARGETS = [README, SITE_INDEX]
+# Each file receives only the sections whose markers it contains. The profile here
+# plus every Markdown page in the site repo (when present). A repo checkout that
+# lacks the sibling site simply ends up with just the profile in TARGETS.
+TARGETS = [README]
+if os.path.isdir(SITE_DIR):
+    TARGETS += sorted(glob.glob(os.path.join(SITE_DIR, "*.md")))
 
 THEMES = [
     ("sat", "SAT & Pseudo-Boolean"),
