@@ -30,9 +30,10 @@ UnB-SAT/
 
 ## Updating people and advised work
 
-The **Current students**, **Theses**, **Iniciação Científica** and **People**
-sections of the profile are generated, so do not edit them by hand. Anything between
-the `<!-- AUTOGEN:* -->` markers is overwritten on the next build.
+Generated content (between `<!-- AUTOGEN:* -->` markers) must not be edited by hand.
+The slim profile here shows only the principal investigator; the website holds the
+full **Current students**, **Theses**, **Iniciação Científica**, **People** and
+publications.
 
 1. Edit [`data/students.yml`](data/students.yml). Fill in `github`, `lattes` and
    `linkedin` as you track them down (empty fields render a neutral avatar and a
@@ -47,8 +48,10 @@ the `<!-- AUTOGEN:* -->` markers is overwritten on the next build.
    python3 scripts/build_profile.py
    ```
 
-3. Commit `data/students.yml` and `profile/README.md` in this repo, and the
-   regenerated `index.md` in the `unb-sat.github.io` repo. Push both.
+3. Commit `data/students.yml` and `profile/README.md` here, and push. The website
+   rebuilds itself from this repo (see below), so you normally do not touch the
+   `unb-sat.github.io` repo. The `index.md` the build also wrote locally is just a
+   preview and can stay uncommitted.
 
 To verify the profile is in sync (for example, in CI):
 
@@ -63,6 +66,13 @@ python3 scripts/build_profile.py --check   # exits non-zero if stale
 `scripts/build_profile.py` or `profile/README.md`. If a contributor edits the data
 without rebuilding (for example, through the GitHub web UI), the check fails; a
 maintainer then runs `python3 scripts/build_profile.py` and commits the result.
+
+The **website** rebuilds itself: a workflow in the `unb-sat.github.io` repo checks
+out this repo, runs the generator and commits `index.md`. It runs on a daily
+schedule and on demand (Actions tab, "Run workflow"). So after pushing data here,
+trigger that workflow (or wait for the schedule) and the site updates with no manual
+copy. For an instant rebuild on every push, the `.github` repo can send a
+`repository_dispatch` of type `rebuild` using a personal access token.
 
 ## What still needs filling in
 

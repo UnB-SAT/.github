@@ -218,9 +218,8 @@ def build_grid(people: list) -> str:
     return "<table>\n" + "\n".join(rows) + "\n</table>"
 
 
-def build_people(data: dict) -> str:
+def advisor_card(data: dict) -> str:
     adv = data.get("advisor", {})
-    out = ["### Principal investigator", ""]
     adv_img = (
         f'<img src="https://github.com/{adv.get("github","")}.png?size=200" width="120" '
         f'alt="{adv.get("name","")}"/>'
@@ -237,17 +236,24 @@ def build_people(data: dict) -> str:
         if k == "github":
             v = f"https://github.com/{v}"
         links.append(f'<a href="{v}">{lbl}</a>')
-    out += [
+    return "\n".join([
         '<p align="center">',
         f'  <a href="{adv.get("site","#")}">{adv_img}</a><br/>',
         f'  <b>{adv.get("name","")}</b><br/>',
         f'  <sub>{adv.get("role","")}</sub><br/>',
         "  " + " &middot; ".join(links),
         "</p>",
-        "",
-        "### Advised students",
-        "",
-    ]
+    ])
+
+
+def build_advisor(data: dict) -> str:
+    # Just the PI card, used on the slim org profile.
+    return advisor_card(data)
+
+
+def build_people(data: dict) -> str:
+    # Full people section (PI + student grid), used on the website.
+    out = ["### Principal investigator", "", advisor_card(data), "", "### Advised students", ""]
     students = data.get("students", []) or []
     buckets = {key: [] for key, _ in THEMES}
     for p in students:
@@ -285,7 +291,8 @@ def main() -> None:
         "ONGOING": build_ongoing(students),
         "THESES": build_theses(students),
         "IC": build_ic(students),
-        "PEOPLE": build_people(data),
+        "PEOPLE": build_people(data),     # PI + full student grid (website)
+        "ADVISOR": build_advisor(data),   # PI only (slim org profile)
     }
 
     stale, written = [], []
