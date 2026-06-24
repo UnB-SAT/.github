@@ -1,0 +1,395 @@
+# =============================================================================
+#  UnB-SAT  .  people, advised theses and undergraduate research
+#  Single source of truth for profile/README.md
+# -----------------------------------------------------------------------------
+#  Edit this file, then run:   python3 scripts/build_profile.py
+#  It regenerates three sections of the profile (between AUTOGEN markers):
+#  the theses list, the Iniciacao Cientifica (IC) list, and the people grid.
+#
+#  PERSON
+#    name      : full name (required)
+#    github    : GitHub *handle* only, e.g. "bcribas"  (drives the avatar)
+#    lattes    : full Lattes URL,  e.g. "http://lattes.cnpq.br/0000000000000000"
+#    linkedin  : full LinkedIn URL
+#    theme     : sat | planning | moj | ai   (used to place the person card)
+#    advisings : list of works advised by Bruno (see below)
+#
+#  ADVISING (one block per work)
+#    kind   : tcc | msc | ic
+#    year   : defense / completion year
+#    title  : original (Portuguese or English) title
+#    en     : short English gloss (one line)
+#    bdm    : permalink (BDM for TCC, repositorio.unb.br for MSc)   [tcc/msc]
+#    repo   : related repo URL under github.com/UnB-SAT             [optional]
+#    theme  : override the person's theme for this work             [optional]
+#    scholarship : true/false (had a grant)                         [ic]
+#    program     : "PIBIC" | "PIBITI" | ""  (Lattes does not record  [ic]
+#                  which programme; please fill this in)
+#    link        : project/home page                                [optional]
+#
+#  Empty fields render a neutral placeholder and a "links to add" note.
+# =============================================================================
+
+advisor:
+  name: "Bruno César Ribas"
+  role: "Associate Professor, University of Brasília (FCTE, Gama)"
+  github: "bcribas"
+  lattes: ""                                  # TODO: paste your Lattes URL
+  linkedin: "https://www.linkedin.com/in/bruno-ribas-41a051b3/"   # TODO: confirm
+  scholar: "https://scholar.google.com/citations?user=pW_EVJoAAAAJ"
+  researchgate: "https://www.researchgate.net/profile/Bruno-Ribas"
+  dblp: "https://dblp.org/pid/121/4222"
+  site: "https://www.brunoribas.com.br"
+
+students:
+
+  # =========================== SAT & Pseudo-Boolean ==========================
+  - name: "Ulysses Bernard Mendes Lara"
+    github: ""
+    lattes: ""
+    linkedin: ""
+    theme: sat
+    advisings:
+      - kind: tcc
+        year: 2020
+        title: "Uma abordagem pseudo-booleana para consolidação de máquinas virtuais com restrições de afinidade"
+        en: "A pseudo-Boolean approach to virtual-machine consolidation with affinity constraints"
+        bdm: "https://bdm.unb.br/handle/10483/30391"
+
+  - name: "Gabriel Marques Tiveron"
+    github: "GabrielTiveron"                   # confirmed
+    lattes: ""
+    linkedin: ""
+    theme: sat
+    advisings:
+      - kind: ic
+        year: 2020
+        title: "Codificação pseudo-Booleana do Desafio do Cadeado"
+        en: "Pseudo-Boolean encoding of the Padlock Challenge"
+        scholarship: true
+        program: ""                           # TODO: PIBIC / PIBITI
+      - kind: tcc
+        year: 2022
+        title: "Banco de dados em grafos: uma conversão para restrições pseudo-booleanas"
+        en: "Graph databases: a translation to pseudo-Boolean constraints"
+        bdm: "https://bdm.unb.br/handle/10483/33943"
+        repo: "https://github.com/UnB-SAT/pb-graph-query"
+
+  - name: "Felipe Borges de Souza Chaves"
+    github: ""                                 # TODO  (candidate: "Bumbleblo", top PluSAT contributor)
+    lattes: ""
+    linkedin: ""
+    theme: sat
+    advisings:
+      - kind: tcc
+        year: 2022
+        title: "PluSAT: um resolvedor SAT modular"
+        en: "PluSAT: a modular SAT solver"
+        bdm: "https://bdm.unb.br/handle/10483/33934"
+        repo: "https://github.com/UnB-SAT/PluSAT"
+
+  - name: "Lucas Gomes Silva"
+    github: ""                                 # TODO  (candidate among PluSAT contributors: "martinsglucas")
+    lattes: ""
+    linkedin: ""
+    theme: sat
+    advisings:
+      - kind: tcc
+        year: 2022
+        title: "Representação AIG como formato de entrada para o LIAMFSAT"
+        en: "AIG representation as an input format for LIAMFSAT"
+        bdm: "https://bdm.unb.br/handle/10483/34022"
+
+  - name: "André Lucas de Sousa Pinto"
+    github: "andrelucax"                       # confirmed
+    lattes: ""
+    linkedin: ""
+    theme: sat
+    advisings:
+      - kind: tcc
+        year: 2022
+        title: "Resolvendo fórmulas Horn mistas com um algoritmo O(2^(0.5284 n))"
+        en: "Solving mixed-Horn formulas with an O(2^(0.5284 n)) algorithm"
+        bdm: "https://bdm.unb.br/handle/10483/33855"
+        repo: "https://github.com/UnB-SAT/tcc-andre-mhf-solver"
+
+  - name: "Luís Henrique Pereira Taira"
+    github: ""
+    lattes: ""
+    linkedin: ""
+    theme: sat
+    advisings:
+      - kind: tcc
+        year: 2023
+        title: "Uma implementação paralela em GPU do algoritmo Walksat"
+        en: "A parallel GPU implementation of the WalkSAT algorithm"
+        bdm: "https://bdm.unb.br/handle/10483/34524"
+
+  - name: "Guilherme Puida Moreira"
+    github: ""
+    lattes: ""
+    linkedin: ""
+    theme: sat
+    advisings:
+      - kind: tcc
+        year: 2025
+        title: "Modelagem Lógica do Quebra-Cabeça Binairo+"
+        en: "Logical modeling of the Binairo+ puzzle"
+        bdm: ""                                # not yet on BDM
+
+  # ============================= Automated Planning ==========================
+  - name: "Mateus Nascimento Nóbrega"
+    github: ""
+    lattes: ""
+    linkedin: ""
+    theme: planning
+    advisings:
+      - kind: tcc
+        year: 2022
+        title: "Modificando o SATPLAN06 com outros métodos de busca"
+        en: "Modifying SATPLAN06 with alternative search methods"
+        bdm: "https://bdm.unb.br/handle/10483/34024"
+
+  - name: "Guilherme Antonio Deusdará Banci"
+    github: ""
+    lattes: ""
+    linkedin: ""
+    theme: planning
+    advisings:
+      - kind: ic
+        year: 2020
+        title: "Atualização dos pacotes Maratona-Linux para Ubuntu 20.04"
+        en: "Updating the Maratona-Linux packages to Ubuntu 20.04"
+        scholarship: true
+        program: ""                           # TODO: PIBIC / PIBITI
+        theme: moj
+        link: "https://github.com/maratona-linux/"
+      - kind: tcc
+        year: 2022
+        title: "Resolvendo pipe mania como planejamento"
+        en: "Solving Pipe Mania as automated planning"
+        bdm: "https://bdm.unb.br/handle/10483/33938"
+
+  - name: "João Luís Takur Baraky Dias"
+    github: ""
+    lattes: ""
+    linkedin: ""
+    theme: planning
+    advisings:
+      - kind: tcc
+        year: 2023
+        title: "Otimização de grade horária por planejamento"
+        en: "Course-timetabling optimization via automated planning"
+        bdm: "https://bdm.unb.br/handle/10483/35955"
+
+  - name: "Marcelo Martins de Oliveira"
+    github: ""
+    lattes: ""
+    linkedin: ""
+    theme: planning
+    advisings:
+      - kind: tcc
+        year: 2023
+        title: "Planejamento clássico: análise para otimização do tempo de geração de fórmulas do SATPLAN"
+        en: "Classical planning: optimizing SATPLAN's formula-generation time"
+        bdm: "https://bdm.unb.br/handle/10483/39154"
+
+  - name: "Samuel de Souza Buters Pereira"
+    github: ""
+    lattes: ""
+    linkedin: ""
+    theme: planning
+    advisings:
+      - kind: tcc
+        year: 2023
+        title: "Resolvendo Puzznic através de planejamento automatizado"
+        en: "Solving Puzznic via automated planning"
+        bdm: "https://bdm.unb.br/handle/10483/39173"
+
+  - name: "Antonio Ruan Moura Barreto"
+    github: ""
+    lattes: ""
+    linkedin: ""
+    theme: planning
+    advisings:
+      - kind: tcc
+        year: 2023
+        title: "Infraplanning: uma plataforma web para desenvolvimento em PDDL"
+        en: "Infraplanning: a web platform for PDDL development"
+        bdm: "https://bdm.unb.br/handle/10483/39333"
+
+  - name: "Rodrigo Tiago Costa Lima"
+    github: ""
+    lattes: ""
+    linkedin: ""
+    theme: planning
+    advisings:
+      - kind: tcc
+        year: 2024
+        title: "Resolvendo Xian-Xiang como planejamento"
+        en: "Solving Xian-Xiang as automated planning"
+        bdm: "https://bdm.unb.br/handle/10483/40165"
+
+  - name: "Daniel dos Santos Barros de Sousa"
+    github: ""
+    lattes: ""
+    linkedin: ""
+    theme: planning
+    advisings:
+      - kind: ic
+        year: 2024
+        title: "Planejamento automatizado para jogos de estratégia em tempo real"
+        en: "Automated planning for real-time strategy games"
+        scholarship: false
+        program: ""                           # TODO: PIBIC / PIBITI
+
+  - name: "Wagner Martins da Cunha"
+    github: ""
+    lattes: ""
+    linkedin: ""
+    theme: planning
+    advisings:
+      - kind: tcc
+        year: 2025
+        title: "Into The PDDL: Planejamento Automático Adversarial"
+        en: "Into The PDDL: adversarial automated planning"
+        bdm: "https://bdm.unb.br/handle/10483/42618"
+
+  - name: "Lucas Gobbi Bergholz"
+    github: ""
+    lattes: ""
+    linkedin: ""
+    theme: planning
+    advisings:
+      - kind: tcc
+        year: 2025
+        title: "Planning-Based Game Design: An Architecture for Storyline Tracking"
+        en: "Planning-based game design: an architecture for storyline tracking"
+        bdm: ""                                # not yet on BDM
+
+  - name: "Bruno Campos Ribeiro"
+    github: "BrunoRiibeiro"                    # confirmed (bni contributor)
+    lattes: ""
+    linkedin: ""
+    theme: planning
+    advisings:
+      - kind: ic
+        year: 2024
+        title: "Do PDDL ao C: explorando novos caminhos com bni"
+        en: "From PDDL to C: exploring new paths with bni"
+        scholarship: false
+        program: ""                           # TODO: PIBIC / PIBITI
+        repo: "https://github.com/UnB-SAT/bni"
+      - kind: tcc
+        year: 2025
+        title: "Optimisation of SAT-Based Planning via Hybrid and Prioritised Asynchronous Binary Search Strategies: an extension of the Madagascar planner"
+        en: "Optimising SAT-based planning (an extension of the Madagascar planner)"
+        bdm: ""                                # not yet on BDM
+
+  - name: "Igor e Silva Penha"
+    github: "igorpenhaa"                       # confirmed (bni contributor)
+    lattes: ""
+    linkedin: ""
+    theme: planning
+    advisings:
+      - kind: ic
+        year: 2024
+        title: "Descomplicando o PDDL: aprendizado facilitado com o REPL bni"
+        en: "Demystifying PDDL: easier learning with the bni REPL"
+        scholarship: false
+        program: ""                           # TODO: PIBIC / PIBITI
+        repo: "https://github.com/UnB-SAT/bni"
+      - kind: tcc
+        year: 2025
+        title: "Optimisation of SAT-Based Planning via Hybrid and Prioritised Asynchronous Binary Search Strategies: an extension of the Madagascar planner"
+        en: "Optimising SAT-based planning (an extension of the Madagascar planner)"
+        bdm: ""                                # not yet on BDM
+
+  # ====================== CD-MOJ & Competitive Programming ===================
+  - name: "Luciano dos Santos Silva"
+    github: ""
+    lattes: ""
+    linkedin: ""
+    theme: moj
+    advisings:
+      - kind: tcc
+        year: 2022
+        title: "CD-MOJ: contribuições para melhorias no sistema"
+        en: "CD-MOJ: contributions and system improvements"
+        bdm: "https://bdm.unb.br/handle/10483/34023"
+
+  - name: "Caio Martins Ferreira"
+    github: ""
+    lattes: ""
+    linkedin: ""
+    theme: moj
+    advisings:
+      - kind: tcc
+        year: 2024
+        title: "CD-MOJ: implementação do módulo de treinamento livre"
+        en: "CD-MOJ: implementing the free-training module"
+        bdm: "https://bdm.unb.br/handle/10483/39837"
+
+  - name: "Lucas Gomes Caldas"
+    github: ""
+    lattes: ""
+    linkedin: ""
+    theme: moj
+    advisings:
+      - kind: tcc
+        year: 2024
+        title: "Escalonamento de múltiplas filas no CD-MOJ"
+        en: "Multi-queue scheduling in CD-MOJ"
+        bdm: "https://bdm.unb.br/handle/10483/39850"
+
+  - name: "Davi Antônio da Silva Santos"
+    github: ""
+    lattes: ""
+    linkedin: ""
+    theme: moj
+    advisings:
+      - kind: ic
+        year: 2021
+        title: "Atualização dos pacotes Maratona-Linux para Ubuntu 20.04"
+        en: "Updating the Maratona-Linux packages to Ubuntu 20.04"
+        scholarship: true
+        program: ""                           # TODO: PIBIC / PIBITI
+        link: "https://github.com/maratona-linux/"
+      - kind: ic
+        year: 2022
+        title: "Atualização dos pacotes Maratona-Linux para Ubuntu 22.04"
+        en: "Updating the Maratona-Linux packages to Ubuntu 22.04"
+        scholarship: true
+        program: ""                           # TODO: PIBIC / PIBITI
+        link: "https://github.com/maratona-linux/"
+
+  # ====================== Artificial Intelligence (broad) ====================
+  - name: "Marcelo Anselmo de Souza Filho"
+    github: ""
+    lattes: ""
+    linkedin: ""
+    theme: ai
+    advisings:
+      - kind: msc
+        year: 2025
+        title: "Inteligência artificial no MPF: uma solução baseada em IA para pseudonimização de dados pessoais"
+        en: "AI at the Federal Prosecution Service (MPF): personal-data pseudonymization (NLP / NER)"
+        bdm: "https://repositorio.unb.br/handle/10482/52680"
+
+  - name: "Bruno Gomes Resende"
+    github: ""
+    lattes: ""
+    linkedin: ""
+    theme: ai
+    advisings:
+      - kind: msc
+        year: 2024
+        title: "Mineração de dados na previsão de melhor canal de abordagem para próxima melhor ação no relacionamento hiper personalizado com o cliente bancário"
+        en: "Data mining for next-best-action and best-channel prediction in hyper-personalized banking CRM"
+        bdm: "https://repositorio.unb.br/handle/10482/52045"
+
+# -----------------------------------------------------------------------------
+#  Optional: people without a thesis record on file (e.g. paper co-authors).
+#  W. B. Morais co-authored the Maratona-Linux paper (2019); add if desired.
+# -----------------------------------------------------------------------------
+members: []
