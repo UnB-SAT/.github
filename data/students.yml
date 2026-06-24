@@ -256,9 +256,9 @@ students:
         bdm: "https://bdm.unb.br/handle/10483/42618"
 
   - name: "Lucas Gobbi Bergholz"
-    github: ""
-    lattes: ""
-    linkedin: ""
+    github: "LucasBergholz"
+    lattes: "https://lattes.cnpq.br/2254701491777732"
+    linkedin: "https://www.linkedin.com/in/lucas-bergholz/"
     theme: planning
     advisings:
       - kind: tcc
