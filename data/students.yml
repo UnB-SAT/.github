@@ -269,8 +269,8 @@ students:
 
   - name: "Bruno Campos Ribeiro"
     github: "BrunoRiibeiro"                    # confirmed (bni contributor)
-    lattes: ""
-    linkedin: ""
+    lattes: "https://lattes.cnpq.br/0137300456623017"
+    linkedin: "https://linkedin.com/in/brunoriibeiro"
     theme: planning
     advisings:
       - kind: ic
@@ -278,7 +278,7 @@ students:
         title: "Do PDDL ao C: explorando novos caminhos com bni"
         en: "From PDDL to C: exploring new paths with bni"
         scholarship: false
-        program: ""                           # TODO: PIBIC / PIBITI
+        program: "pibic"
         repo: "https://github.com/UnB-SAT/bni"
       - kind: tcc
         year: 2025
