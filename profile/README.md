@@ -188,13 +188,15 @@ Grouped by research line. Co-authors who are or were our students are shown in
 [DBLP](https://dblp.org/pid/121/4222).
 
 #### SAT & Pseudo-Boolean
+- **G. Tiveron**, B. C. Ribas. *A Pseudo-Boolean Formulation for Graph Database Queries*. FLAIRS, 2026. [DOI](https://doi.org/10.32473/flairs.39.1.141833).
 - B. C. Ribas, M. A. Castilho, F. Silva, R. M. Suguimoto, R. A. N. R. Montaño. *PBFVMC: A New Pseudo-Boolean Formulation to Virtual-Machine Consolidation*. BRACIS, 2013. [DOI](https://doi.org/10.1109/BRACIS.2013.41), [preprint](https://www.brunoribas.com.br/publicacoes/files/bracis-2013-pbfvmc.pdf).
 - B. C. Ribas, R. M. Suguimoto, R. A. N. R. Montaño, F. Silva, L. C. E. de Bona, M. A. Castilho. *On Modelling Virtual Machine Consolidation to Pseudo-Boolean Constraints*. IBERAMIA, 2012. [DOI](https://doi.org/10.1007/978-3-642-34654-5_37), [preprint](https://www.brunoribas.com.br/publicacoes/files/iberamia-2012-consolidation.pdf).
 - R. Tavares de Oliveira, F. Silva, B. C. Ribas, M. A. Castilho. *On Modeling Connectedness in Reductions from Graph Problems to Extended Satisfiability*. IBERAMIA, 2012. [DBLP](https://dblp.org/rec/conf/iberamia/OliveiraSRC12.html).
 
 #### Automated Planning
-- R. A. N. R. Montaño, B. C. Ribas. *Planning as Mixed-Horn Formulas Satisfiability*. ENIAC, 2017.
+- B. C. Ribas, **I. e S. Penha**, **L. G. Bergholz**, **B. C. Ribeiro**. *Mojified Pacman: A Deterministic and Fully Observable Variant for PDDL Modeling Competitions*. KEPS workshop, ICAPS, 2025. [PDF](https://icaps25.icaps-conference.org/program/workshops/keps-papers/pacman.pdf).
 - **B. C. Ribeiro**, **I. e S. Penha**, B. C. Ribas. *bni: A PDDL to C compiler with integrated REPL for interactive testing*. ENIAC, 2025. [DOI](https://doi.org/10.5753/eniac.2025.13960).
+- R. A. N. R. Montaño, B. C. Ribas. *Planning as Mixed-Horn Formulas Satisfiability*. ENIAC, 2017.
 
 #### CD-MOJ & Competitive Programming
 - B. C. Ribas, **W. B. Morais**. *Maratona-Linux: um ambiente para a Maratona de Programação*. Computer on the Beach, 2019.
@@ -257,7 +259,7 @@ Grouped by research line. Co-authors who are or were our students are shown in
   <tr>
     <td align="center" valign="top" width="155"><a href="https://github.com/igorpenhaa"><img src="https://github.com/igorpenhaa.png?size=160" width="90" alt="Igor e Silva Penha"/></a><br/><sub><b>Igor e Silva Penha</b></sub><br/><sub>B.Sc., IC</sub><br/><sub><a href="https://github.com/igorpenhaa">GitHub</a></sub></td>
     <td align="center" valign="top" width="155"><img src="https://ui-avatars.com/api/?background=0D1117&color=FFFFFF&bold=true&size=120&name=Jo%C3%A3o%20Lu%C3%ADs%20Takur%20Baraky%20Dias" width="90" alt="João Luís Takur Baraky Dias"/><br/><sub><b>João Luís Takur Baraky Dias</b></sub><br/><sub>B.Sc.</sub><br/><sub><i>links to add</i></sub></td>
-    <td align="center" valign="top" width="155"><img src="https://ui-avatars.com/api/?background=0D1117&color=FFFFFF&bold=true&size=120&name=Lucas%20Gobbi%20Bergholz" width="90" alt="Lucas Gobbi Bergholz"/><br/><sub><b>Lucas Gobbi Bergholz</b></sub><br/><sub>B.Sc.</sub><br/><sub><i>links to add</i></sub></td>
+    <td align="center" valign="top" width="155"><a href="https://github.com/LucasBergholz"><img src="https://github.com/LucasBergholz.png?size=160" width="90" alt="Lucas Gobbi Bergholz"/></a><br/><sub><b>Lucas Gobbi Bergholz</b></sub><br/><sub>B.Sc.</sub><br/><sub><a href="https://github.com/LucasBergholz">GitHub</a> &middot; <a href="https://lattes.cnpq.br/2254701491777732">Lattes</a> &middot; <a href="https://www.linkedin.com/in/lucas-bergholz/">LinkedIn</a></sub></td>
     <td align="center" valign="top" width="155"><img src="https://ui-avatars.com/api/?background=0D1117&color=FFFFFF&bold=true&size=120&name=Marcelo%20Martins%20de%20Oliveira" width="90" alt="Marcelo Martins de Oliveira"/><br/><sub><b>Marcelo Martins de Oliveira</b></sub><br/><sub>B.Sc.</sub><br/><sub><i>links to add</i></sub></td>
   </tr>
   <tr>
