@@ -71,19 +71,28 @@ def theme_of(person: dict, adv: dict) -> str:
     return adv.get("theme") or person.get("theme", "sat")
 
 
-def collect(students: list, kinds: set) -> dict:
-    """Return {theme_key: [(person, advising), ...]} for advisings of the given kinds."""
+def collect(students: list, kinds: set, status: str = "any") -> dict:
+    """Return {theme_key: [(person, advising), ...]} for advisings of the given kinds.
+
+    status: "any", "done" (exclude in-progress), or "ongoing" (only in-progress).
+    """
     buckets = {key: [] for key, _ in THEMES}
     for p in students:
         for adv in p.get("advisings", []) or []:
-            if adv.get("kind") in kinds:
-                buckets.setdefault(theme_of(p, adv), []).append((p, adv))
+            if adv.get("kind") not in kinds:
+                continue
+            ongoing = adv.get("status") == "ongoing"
+            if status == "done" and ongoing:
+                continue
+            if status == "ongoing" and not ongoing:
+                continue
+            buckets.setdefault(theme_of(p, adv), []).append((p, adv))
     return buckets
 
 
 # --------------------------------------------------------------------------- #
 def build_theses(students: list) -> str:
-    buckets = collect(students, {"tcc", "msc"})
+    buckets = collect(students, {"tcc", "msc"}, status="done")
     blocks = []
     for key, label in THEMES:
         group = buckets.get(key) or []
@@ -110,7 +119,7 @@ def build_theses(students: list) -> str:
 
 
 def build_ic(students: list) -> str:
-    buckets = collect(students, {"ic"})
+    buckets = collect(students, {"ic"}, status="done")
     blocks = []
     for key, label in THEMES:
         group = buckets.get(key) or []
@@ -131,6 +140,35 @@ def build_ic(students: list) -> str:
                 f'- **{person["name"]}** (IC, {adv.get("year","")}). '
                 f'*{adv["title"]}*.{tail}'
             )
+            if adv.get("en"):
+                lines.append(f'  <sub>{adv["en"]}</sub>')
+        blocks.append("\n".join(lines))
+    return "\n\n".join(blocks)
+
+
+def build_ongoing(students: list) -> str:
+    buckets = collect(students, {"tcc", "msc", "ic"}, status="ongoing")
+    blocks = []
+    for key, label in THEMES:
+        group = buckets.get(key) or []
+        if not group:
+            continue
+        # theses first, then IC; alphabetical within each
+        group.sort(key=lambda pa: (pa[1].get("kind") == "ic", pa[0]["name"]))
+        lines = [f"#### {label}", ""]
+        for person, adv in group:
+            if adv["kind"] == "ic":
+                parts = ["IC"]
+                if adv.get("program"):
+                    parts.append(adv["program"])
+                parts.append("expected " + adv["ends"] if adv.get("ends") else "in progress")
+                meta = ", ".join(parts)
+            else:
+                meta = f'{KIND_LABEL.get(adv["kind"], "B.Sc.")} TCC, in progress'
+            title = adv["title"]
+            if adv.get("provisional"):
+                title = f"{title} (provisional title)"
+            lines.append(f'- **{person["name"]}** ({meta}). *{title}*.')
             if adv.get("en"):
                 lines.append(f'  <sub>{adv["en"]}</sub>')
         blocks.append("\n".join(lines))
@@ -232,7 +270,8 @@ def main() -> None:
     original = open(README, encoding="utf-8").read()
 
     students = data.get("students", []) or []
-    updated = inject(original, "THESES", build_theses(students))
+    updated = inject(original, "ONGOING", build_ongoing(students))
+    updated = inject(updated, "THESES", build_theses(students))
     updated = inject(updated, "IC", build_ic(students))
     updated = inject(updated, "PEOPLE", build_people(data))
 
@@ -248,9 +287,10 @@ def main() -> None:
     n_tcc = sum(1 for p in students for a in p.get("advisings", []) if a.get("kind") == "tcc")
     n_msc = sum(1 for p in students for a in p.get("advisings", []) if a.get("kind") == "msc")
     n_ic = sum(1 for p in students for a in p.get("advisings", []) if a.get("kind") == "ic")
+    n_ongoing = sum(1 for p in students for a in p.get("advisings", []) if a.get("status") == "ongoing")
     miss_gh = [p["name"] for p in people if not (p.get("github") or "").strip()]
     print(f"profile/README.md rebuilt: {len(people)} people; "
-          f"{n_tcc} TCC, {n_msc} M.Sc., {n_ic} IC.")
+          f"{n_tcc} TCC, {n_msc} M.Sc., {n_ic} IC; {n_ongoing} works in progress.")
     print(f"  still missing GitHub: {len(miss_gh)}")
     print(f"  still missing Lattes/LinkedIn for most entries (fill in data/students.yml).")
 

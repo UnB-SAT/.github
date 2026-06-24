@@ -10,21 +10,23 @@ This repository powers the public profile of the
 ## Layout
 
 ```
-profile/README.md         the org profile page (what visitors see)
-data/students.yml         single source of truth for people and advised work
-scripts/build_profile.py  regenerates the auto-generated sections of the profile
+profile/README.md            the org profile page (what visitors see)
+data/students.yml            single source of truth for people and advised work
+scripts/build_profile.py     regenerates the auto-generated sections of the profile
+.github/workflows/profile.yml CI check that the profile is in sync with the data
 ```
 
 ## Updating people and advised work
 
-The **Theses**, **Iniciação Científica** and **People** sections of the profile are
-generated, so do not edit them by hand. Anything between the `<!-- AUTOGEN:* -->`
-markers is overwritten on the next build.
+The **Current students**, **Theses**, **Iniciação Científica** and **People**
+sections of the profile are generated, so do not edit them by hand. Anything between
+the `<!-- AUTOGEN:* -->` markers is overwritten on the next build.
 
 1. Edit [`data/students.yml`](data/students.yml). Fill in `github`, `lattes` and
    `linkedin` as you track them down (empty fields render a neutral avatar and a
    "links to add" note). Add new advisees, and new `advisings` blocks (kind `tcc`,
-   `msc` or `ic`), in the same file.
+   `msc` or `ic`), in the same file. For work in progress set `status: ongoing`; it
+   moves to the "Current students" section and out of the completed lists.
 2. Rebuild:
 
    ```bash
@@ -40,16 +42,25 @@ To verify the profile is in sync (for example, in CI):
 python3 scripts/build_profile.py --check   # exits non-zero if stale
 ```
 
+## Continuous integration
+
+[`.github/workflows/profile.yml`](.github/workflows/profile.yml) runs that same
+`--check` on every pull request and push that touches `data/students.yml`,
+`scripts/build_profile.py` or `profile/README.md`. If a contributor edits the data
+without rebuilding (for example, through the GitHub web UI), the check fails; a
+maintainer then runs `python3 scripts/build_profile.py` and commits the result.
+
 ## What still needs filling in
 
 Most people are missing GitHub, Lattes and LinkedIn links. The BDM and repository
 PDFs are a good source; add what you find to `students.yml`.
 
 Confirmed GitHub handles: `bcribas` (advisor), `GabrielTiveron`, `andrelucax`,
-`igorpenhaa` (Igor Penha) and `BrunoRiibeiro` (Bruno Campos Ribeiro). Two more are
-only guesses, flagged with `# candidate:` comments in the data file (`Bumbleblo` for
-Felipe Chaves and `martinsglucas` for Lucas Gomes Silva); please confirm before
-trusting them.
+`igorpenhaa` (Igor Penha), `BrunoRiibeiro` (Bruno Campos Ribeiro) and `LucasBergholz`
+(added by the student himself). Three more are only guesses, flagged with
+`# candidate:` comments in the data file: `Bumbleblo` for Felipe Chaves, `west7` for
+Guilherme Westphall, and `martinsglucas` for Lucas Martins Gabriel. Please confirm
+before trusting them.
 
 For the `program` field of each Iniciação Científica entry, set `PIBIC` or `PIBITI`.
 The Lattes export does not record which programme funded each project, so it is left

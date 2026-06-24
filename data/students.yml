@@ -26,6 +26,10 @@
 #    program     : "PIBIC" | "PIBITI" | ""  (Lattes does not record  [ic]
 #                  which programme; please fill this in)
 #    link        : project/home page                                [optional]
+#    status      : "ongoing" for work in progress (omit when done).
+#                  Ongoing work appears under "Current students".
+#    provisional : true if the title is still provisional            [optional]
+#    ends        : expected completion, e.g. "August 2026"     [ic, ongoing]
 #
 #  Empty fields render a neutral placeholder and a "links to add" note.
 # =============================================================================
@@ -89,7 +93,7 @@ students:
         repo: "https://github.com/UnB-SAT/PluSAT"
 
   - name: "Lucas Gomes Silva"
-    github: ""                                 # TODO  (candidate among PluSAT contributors: "martinsglucas")
+    github: ""                                 # TODO
     lattes: ""
     linkedin: ""
     theme: sat
@@ -387,6 +391,101 @@ students:
         title: "Mineração de dados na previsão de melhor canal de abordagem para próxima melhor ação no relacionamento hiper personalizado com o cliente bancário"
         en: "Data mining for next-best-action and best-channel prediction in hyper-personalized banking CRM"
         bdm: "https://repositorio.unb.br/handle/10482/52045"
+
+  # ===== Ongoing (current TCC / IC, not yet defended; no document yet) =====
+  - name: "André Emanuel Bispo da Silva"
+    github: ""
+    lattes: ""
+    linkedin: ""
+    theme: planning
+    advisings:
+      - kind: tcc
+        status: ongoing
+        provisional: true
+        title: "Aquasplash: uma abordagem em planejamento automatizado"
+        en: "Aquasplash: an automated-planning approach"
+      - kind: ic
+        status: ongoing
+        program: "PIBIC"
+        ends: "August 2026"
+        title: "Planejamento automatizado para o jogo com transições complexas (Aquasplash)"
+        en: "Automated planning for a game with complex transitions (Aquasplash)"
+
+  - name: "Caio Felipe Rocha Rodrigues"
+    github: ""
+    lattes: ""
+    linkedin: ""
+    theme: planning
+    advisings:
+      - kind: tcc
+        status: ongoing
+        title: "GGP-LLM: um jogador GGP baseado em LLM"
+        en: "GGP-LLM: an LLM-based General Game Playing agent (joint TCC with Arthur Ribeiro e Sousa)"
+
+  - name: "Arthur Ribeiro e Sousa"
+    github: ""
+    lattes: ""
+    linkedin: ""
+    theme: planning
+    advisings:
+      - kind: tcc
+        status: ongoing
+        title: "GGP-LLM: um jogador GGP baseado em LLM"
+        en: "GGP-LLM: an LLM-based General Game Playing agent (joint TCC with Caio Felipe Rocha Rodrigues)"
+
+  - name: "Guilherme Westphall"
+    github: ""                                 # candidate: "west7" (PluSAT contributor), please confirm
+    lattes: ""
+    linkedin: ""
+    theme: planning
+    advisings:
+      - kind: tcc
+        status: ongoing
+        provisional: true
+        title: "Escalonamento na Gollen Network com planejamento em inteligência artificial"
+        en: "Scheduling on the Gollen Network via AI planning (joint TCC with Lucas Martins Gabriel)"
+
+  - name: "Lucas Martins Gabriel"
+    github: ""                                 # candidate: "martinsglucas" (PluSAT contributor), please confirm
+    lattes: ""
+    linkedin: ""
+    theme: planning
+    advisings:
+      - kind: tcc
+        status: ongoing
+        provisional: true
+        title: "Escalonamento na Gollen Network com planejamento em inteligência artificial"
+        en: "Scheduling on the Gollen Network via AI planning (joint TCC with Guilherme Westphall)"
+
+  - name: "Carlos Eduardo Mota Alves"
+    github: ""
+    lattes: ""
+    linkedin: ""
+    theme: planning
+    advisings:
+      - kind: tcc
+        status: ongoing
+        provisional: true
+        title: "Planejamento como satisfatibilidade: novas abordagens e estudo de caso"
+        en: "Planning as satisfiability: new approaches and a case study"
+      - kind: ic
+        status: ongoing
+        program: "PIBIC"
+        ends: "August 2026"
+        title: "Investigação do uso de núcleos de insatisfatibilidade para identificação de problemas sem solução em planejamento automatizado"
+        en: "Using unsatisfiability cores to detect unsolvable automated-planning problems"
+
+  - name: "Arthur Grandão de Mello"
+    github: ""
+    lattes: ""
+    linkedin: ""
+    theme: sat
+    advisings:
+      - kind: tcc
+        status: ongoing
+        provisional: true
+        title: "Otimizador de campeonatos esportivos"
+        en: "Sports-championship optimizer"
 
 # -----------------------------------------------------------------------------
 #  Optional: people without a thesis record on file (e.g. paper co-authors).

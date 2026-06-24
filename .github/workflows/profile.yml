@@ -1,0 +1,29 @@
+name: Profile in sync
+
+# Fails a PR (or push to main) when profile/README.md was not regenerated from
+# data/students.yml. Run `python3 scripts/build_profile.py` and commit the result.
+
+on:
+  pull_request:
+    paths:
+      - data/students.yml
+      - scripts/build_profile.py
+      - profile/README.md
+  push:
+    branches: [main]
+    paths:
+      - data/students.yml
+      - scripts/build_profile.py
+      - profile/README.md
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - run: pip install pyyaml
+      - name: Verify profile/README.md matches data/students.yml
+        run: python3 scripts/build_profile.py --check
